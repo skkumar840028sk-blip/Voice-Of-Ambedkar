@@ -1,22 +1,10 @@
 <!DOCTYPE html>
 <html lang="hi">
-
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>
-Voice Of Ambedkar
-</title>
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-rel="stylesheet">
+<title>Voice Of Ambedkar</title>
 
 <style>
 
@@ -24,57 +12,51 @@ rel="stylesheet">
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Arial;
 }
 
 body{
-background:#f2f2f2;
+background:#f5f5f5;
 }
 
 /* TOP BLACK BAR */
 
-.top-black{
+.topbar{
 background:black;
 color:white;
 padding:10px;
-text-align:center;
 font-size:14px;
-font-weight:600;
+text-align:center;
+font-weight:bold;
 }
 
 /* HEADER */
 
 header{
 background:white;
-padding:15px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-.header-top{
+padding:18px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+z-index:999;
 }
 
 .logo{
-font-size:38px;
-font-weight:700;
-color:#d60000;
+font-size:42px;
+font-weight:900;
+color:#c40000;
 }
 
-.menu{
-font-size:38px;
-cursor:pointer;
+.icons{
+display:flex;
+gap:20px;
+font-size:34px;
 }
 
-.search{
-font-size:30px;
-}
-
-/* MENU BOX */
+/* MENU */
 
 #menuBox{
 display:none;
@@ -85,73 +67,75 @@ background:white;
 width:320px;
 padding:20px;
 border-radius:20px;
-box-shadow:0 0 20px rgba(0,0,0,0.2);
+box-shadow:0 5px 30px rgba(0,0,0,0.2);
 z-index:9999;
 }
 
 #menuBox a{
 display:block;
-padding:15px 0;
+padding:16px 0;
 text-decoration:none;
-font-size:20px;
 color:black;
+font-size:24px;
 border-bottom:1px solid #ddd;
 font-weight:600;
 }
 
-/* CATEGORY */
+/* NAV */
 
-.category{
+.nav{
 display:flex;
 overflow:auto;
-gap:20px;
+gap:30px;
 padding:18px;
 background:white;
-margin-top:5px;
+font-size:22px;
+font-weight:700;
 }
 
-.category a{
+.nav a{
 text-decoration:none;
 color:black;
-font-size:20px;
-font-weight:600;
 white-space:nowrap;
 }
 
-/* TAGS */
+/* BREAKING TAGS */
 
 .tags{
 display:flex;
 gap:15px;
-padding:20px;
 overflow:auto;
+padding:20px;
+background:white;
 }
 
 .tag{
-background:white;
 padding:12px 25px;
-border-radius:50px;
-font-weight:600;
+border-radius:40px;
+background:#eee;
+font-weight:bold;
 white-space:nowrap;
+font-size:18px;
 }
 
 /* HEADLINE */
 
 .headline{
-background:white;
 padding:25px;
+background:white;
 }
 
 .headline h1{
-font-size:50px;
-line-height:1.4;
+font-size:58px;
+line-height:1.2;
+font-weight:900;
 }
 
 .headline p{
-font-size:22px;
+font-size:24px;
 margin-top:20px;
 line-height:1.8;
-color:#444;
+color:#555;
 }
 
 /* IMAGE */
@@ -166,7 +150,7 @@ width:100%;
 border-radius:20px;
 }
 
-/* SEARCH BAR */
+/* SEARCH */
 
 .searchbox{
 margin:20px;
@@ -179,76 +163,62 @@ box-shadow:0 0 10px rgba(0,0,0,0.1);
 
 .searchbox input{
 flex:1;
-padding:18px;
+padding:20px;
 border:none;
+font-size:22px;
 outline:none;
-font-size:20px;
 }
 
 .searchbox button{
-padding:18px 35px;
+padding:20px 35px;
 border:none;
-background:#d60000;
+background:#005eff;
 color:white;
 font-size:20px;
+font-weight:bold;
 }
 
 /* SECTION */
 
 .section{
-padding:20px;
+padding:25px;
 }
 
 .section-title{
 font-size:42px;
+font-weight:900;
 margin-bottom:25px;
-font-weight:700;
 }
 
-/* NEWS GRID */
-
-.news-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
+/* CARD */
 
 .card{
 background:white;
-border-radius:20px;
+border-radius:25px;
 overflow:hidden;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+margin-bottom:30px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
 .card img{
 width:100%;
-height:240px;
+height:260px;
 object-fit:cover;
 }
 
 .card-content{
-padding:20px;
+padding:25px;
 }
 
 .card-content h3{
-font-size:30px;
+font-size:34px;
 margin-bottom:15px;
 }
 
 .card-content p{
-font-size:19px;
+font-size:22px;
 line-height:1.7;
-color:#555;
-}
-
-.card-content a{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#d60000;
-color:white;
-text-decoration:none;
-border-radius:50px;
+color:#444;
 }
 
 /* FOOTER */
@@ -259,40 +229,32 @@ color:white;
 padding:40px;
 text-align:center;
 margin-top:40px;
-font-size:18px;
+font-size:20px;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="top-black">
-
-FRI, MAY 08, 2026 | Voice Of Ambedkar News Portal
-
+<div class="topbar">
+FRI, MAY 08 2026 | Voice Of Ambedkar News Portal
 </div>
 
 <header>
-
-<div class="header-top">
 
 <div class="logo">
 जय भीम
 </div>
 
-<div style="display:flex;gap:20px;align-items:center;">
+<div class="icons">
 
-<div class="search">
+<div>
 🔎
 </div>
 
-<div class="menu"
-onclick="toggleMenu()">
+<div onclick="toggleMenu()">
 ☰
-</div>
-
 </div>
 
 </div>
@@ -303,8 +265,12 @@ onclick="toggleMenu()">
 
 <div id="menuBox">
 
-<<a href="biography.html">
+<a href="biography.html">
 डॉ. अम्बेडकर का जीवन
+</a>
+
+<a href="constitution.html">
+भारतीय संविधान
 </a>
 
 <a href="women-rights.html">
@@ -315,24 +281,12 @@ onclick="toggleMenu()">
 शिक्षा के लिए योगदान
 </a>
 
-<a href="constitution.html">
-भारतीय संविधान
-</a>
-
 <a href="mahad-satyagraha.html">
 महाड़ सत्याग्रह
 </a>
 
-<a href="buddhism.html">
-बौद्ध धर्म दीक्षा
-</a>
-
 <a href="dalit-movement.html">
 दलित आंदोलन
-</a>
-
-<a href="quotes.html">
-Quotes
 </a>
 
 <a href="timeline.html">
@@ -343,121 +297,68 @@ Timeline
 Gallery
 </a>
 
-<a href="books.html">
-Books
-</a>
-
-<a href="speeches.html">
-Speeches
-</a>
-
-<a href="#">
-महिलाओं के अधिकार
-</a>
-
-<a href="#">
-शिक्षा के लिए योगदान
-</a>
-
-<a href="#">
-भारतीय संविधान
-</a>
-
-<a href="#">
-महाड़ सत्याग्रह
-</a>
-
-<a href="#">
-बौद्ध धर्म दीक्षा
-</a>
-
-<a href="#">
-दलित आंदोलन
-</a>
-
-<a href="#">
+<a href="quotes.html">
 Quotes
 </a>
 
+</div>
+
+<!-- NAV -->
+
+<div class="nav">
+
 <a href="#">
-Gallery
+होम
 </a>
 
 <a href="#">
-Timeline
+ताज़ा
 </a>
-<div style="display:flex;
-gap:15px;
-overflow:auto;
-padding:20px;
-background:white;">
 
-<a href="constitution.html"
-style="text-decoration:none;
-background:#f1f1f1;
-padding:12px 25px;
-border-radius:40px;
-color:black;
-font-weight:600;
-white-space:nowrap;">
+<a href="#">
+ब्रेकिंग
+</a>
+
+<a href="#">
 संविधान
 </a>
 
-<a href="women-rights.html"
-style="text-decoration:none;
-background:#f1f1f1;
-padding:12px 25px;
-border-radius:40px;
-color:black;
-font-weight:600;
-white-space:nowrap;">
-महिलाओं के अधिकार
+<a href="#">
+महिलाएं
 </a>
 
-<a href="mahad-satyagraha.html"
-style="text-decoration:none;
-background:#f1f1f1;
-padding:12px 25px;
-border-radius:40px;
-color:black;
-font-weight:600;
-white-space:nowrap;">
-महाड़ सत्याग्रह
-</a>
-
-<a href="education.html"
-style="text-decoration:none;
-background:#f1f1f1;
-padding:12px 25px;
-border-radius:40px;
-color:black;
-font-weight:600;
-white-space:nowrap;">
+<a href="#">
 शिक्षा
 </a>
 
-<a href="dalit-movement.html"
-style="text-decoration:none;
-background:#f1f1f1;
-padding:12px 25px;
-border-radius:40px;
-color:black;
-font-weight:600;
-white-space:nowrap;">
+<a href="#">
 आंदोलन
 </a>
 
-<a href="timeline.html"
-style="text-decoration:none;
-background:#f1f1f1;
-padding:12px 25px;
-border-radius:40px;
-color:black;
-font-weight:600;
-white-space:nowrap;">
+<a href="#">
 इतिहास
 </a>
 
+</div>
+
+<!-- TAGS -->
+
+<div class="tags">
+
+<div class="tag">
+संविधान
+</div>
+
+<div class="tag">
+महिलाओं के अधिकार
+</div>
+
+<div class="tag">
+महाड़ सत्याग्रह
+</div>
+
+<div class="tag">
+शिक्षा
 </div>
 
 </div>
@@ -467,15 +368,12 @@ white-space:nowrap;">
 <section class="headline">
 
 <h1>
-
 डॉ. भीमराव अम्बेडकर ने भारत को समानता और न्याय का संविधान दिया
-
 </h1>
 
 <p>
-
-डॉ. बाबासाहेब अम्बेडकर भारतीय संविधान के निर्माता, महान समाज सुधारक और करोड़ों लोगों के प्रेरणास्रोत हैं।
-
+डॉ. बाबासाहेब अम्बेडकर भारतीय संविधान के निर्माता,
+महान समाज सुधारक और करोड़ों लोगों के प्रेरणास्रोत हैं।
 </p>
 
 </section>
@@ -486,93 +384,7 @@ white-space:nowrap;">
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Dr._Bhimrao_Ambedkar.jpg">
 
-</div><section style="padding:30px;background:#f5f5f5;">
-
-<h2 style="font-size:38px;
-margin-bottom:30px;
-font-weight:800;">
-मुख्य विषय
-</h2>
-
-<div style="display:grid;
-grid-template-columns:1fr;
-gap:25px;">
-
-<a href="constitution.html"
-style="text-decoration:none;
-background:white;
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-color:black;">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Indian_Constitution.jpg"
-style="width:100%;height:250px;object-fit:cover;">
-
-<div style="padding:25px;">
-
-<h3 style="font-size:32px;">
-भारतीय संविधान
-</h3>
-
-<p style="font-size:22px;line-height:1.7;">
-डॉ. अम्बेडकर ने भारत को आधुनिक संविधान दिया।
-</p>
-
 </div>
-</a>
-
-<a href="women-rights.html"
-style="text-decoration:none;
-background:white;
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-color:black;">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/B._R._Ambedkar.jpg"
-style="width:100%;height:250px;object-fit:cover;">
-
-<div style="padding:25px;">
-
-<h3 style="font-size:32px;">
-महिलाओं के अधिकार
-</h3>
-
-<p style="font-size:22px;line-height:1.7;">
-महिलाओं की समानता के लिए बाबासाहेब ने संघर्ष किया।
-</p>
-
-</div>
-</a>
-
-<a href="education.html"
-style="text-decoration:none;
-background:white;
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-color:black;">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Dr._Bhimrao_Ambedkar.jpg"
-style="width:100%;height:250px;object-fit:cover;">
-
-<div style="padding:25px;">
-
-<h3 style="font-size:32px;">
-शिक्षा
-</h3>
-
-<p style="font-size:22px;line-height:1.7;">
-शिक्षा को सबसे बड़ा हथियार बताया गया।
-</p>
-
-</div>
-</a>
-
-</div>
-
-</section>
 
 <!-- SEARCH -->
 
@@ -591,69 +403,36 @@ Search
 
 <section class="section">
 
-<h2 class="section-title">
+<div class="section-title">
+मुख्य विषय
+</div>
 
-Featured Articles
-
-</h2>
-
-<div class="news-grid">
+<!-- CARD -->
 
 <div class="card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Dr._Bhimrao_Ambedkar.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Indian_Constitution.jpg">
 
 <div class="card-content">
 
 <h3>
-डॉ. अम्बेडकर का जीवन
+भारतीय संविधान
 </h3>
 
 <p>
-
-Babasaheb के बचपन, शिक्षा, संघर्ष और संविधान निर्माण की पूरी कहानी पढ़ें।
-
+डॉ. अम्बेडकर ने भारत को आधुनिक संविधान दिया।
+उन्होंने समानता, न्याय और स्वतंत्रता का मार्ग बनाया।
 </p>
 
-<a href="biography.html">
-
-पूरा पढ़ें
-
-</a>
-
 </div>
 
 </div>
+
+<!-- CARD -->
 
 <div class="card">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Ambedkar_with_followers.jpg">
-
-<div class="card-content">
-
-<h3>
-महाड़ सत्याग्रह
-</h3>
-
-<p>
-
-1927 का ऐतिहासिक आंदोलन जिसने सामाजिक न्याय की नई दिशा दी।
-
-</p>
-
-<a href="#">
-
-पूरा पढ़ें
-
-</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Dr._Bhimrao_Ambedkar.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/B._R._Ambedkar.jpg">
 
 <div class="card-content">
 
@@ -662,18 +441,28 @@ Babasaheb के बचपन, शिक्षा, संघर्ष और स
 </h3>
 
 <p>
-
-डॉ. अम्बेडकर ने महिलाओं को समान अधिकार दिलाने के लिए ऐतिहासिक कार्य किए।
-
+बाबासाहेब ने महिलाओं को संपत्ति, शिक्षा और समान अधिकार दिलाने के लिए संघर्ष किया।
 </p>
 
-<a href="#">
-
-पूरा पढ़ें
-
-</a>
+</div>
 
 </div>
+
+<!-- CARD -->
+
+<div class="card">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Ambedkar_Mahad_Satyagraha.jpg">
+
+<div class="card-content">
+
+<h3>
+महाड़ सत्याग्रह
+</h3>
+
+<p>
+महाड़ सत्याग्रह सामाजिक समानता और पानी के अधिकार के लिए ऐतिहासिक आंदोलन था।
+</p>
 
 </div>
 
@@ -683,7 +472,7 @@ Babasaheb के बचपन, शिक्षा, संघर्ष और स
 
 <footer>
 
-© 2026 Voice Of Ambedkar • Jai Bhim
+Voice Of Ambedkar © 2026
 
 </footer>
 
@@ -694,13 +483,15 @@ function toggleMenu(){
 var menu =
 document.getElementById("menuBox");
 
-if(menu.style.display === "block"){
+if(menu.style.display==="block"){
 
-menu.style.display = "none";
+menu.style.display="none";
 
-}else{
+}
 
-menu.style.display = "block";
+else{
+
+menu.style.display="block";
 
 }
 
