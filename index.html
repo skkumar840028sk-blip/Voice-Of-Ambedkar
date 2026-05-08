@@ -1,92 +1,22 @@
-<!DOCTYPE html><html lang="hi">
+<!DOCTYPE html>
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Voice Of Ambedkar</title><link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"><style>
+<title>Voice Of Ambedkar</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
-}<header style="
-background:#021327;
-padding:18px 25px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 0 10px rgba(0,0,0,0.5);
-">
+}
 
-<div class="menu" onclick="toggleMenu()" style="font-size:34px;cursor:pointer;color:white;">
-☰
-</div>
-
-<div style="font-size:28px;font-weight:700;color:white;">
-Voice Of Ambedkar
-</div>
-
-<div style="font-size:30px;color:white;">
-🔍
-</div>
-
-</header>
-
-<div id="menuBox" style="
-display:none;
-position:absolute;
-top:80px;
-left:20px;
-background:#0c2f5d;
-padding:20px;
-border-radius:20px;
-width:280px;
-z-index:1000;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
-">
-
-<p><a href="index.html" style="color:white;text-decoration:none;font-size:22px;">🏠 Home</a></p>
-
-<br>
-
-<p><a href="biography.html" style="color:white;text-decoration:none;font-size:22px;">📖 Biography</a></p>
-
-<br>
-
-<p><a href="mahad-satyagraha.html" style="color:white;text-decoration:none;font-size:22px;">✊ महाड़ सत्याग्रह</a></p>
-
-</div>
-<div class="card">
-<h2>मुख्य विषय</h2>
-
-<p>
-<a href="biography.html">🔵 डॉ. भीमराव अम्बेडकर का जीवन परिचय</a>
-</p>
-
-<p>
-<a href="mahad-satyagraha.html">🔵 महाड़ सत्याग्रह</a>
-</p>
-
-<p>
-<a href="constitution.html">🔵 भारतीय संविधान निर्माण</a>
-</p>
-
-<p>
-<a href="education.html">🔵 Babasaheb Education</a>
-</p>
-
-<p>
-<a href="buddhism.html">🔵 बौद्ध धर्म दीक्षा</a>
-</p>
-
-<p>
-<a href="gallery.html">🔵 Historical Gallery</a>
-</p>
-
-</div>
 body{
 background:#071b34;
 color:white;
@@ -104,22 +34,6 @@ z-index:1000;
 box-shadow:0 0 10px rgba(0,0,0,0.5);
 }
 
-.logo{
-font-size:32px;
-font-weight:700;
-color:#fff;
-}
-
-.menu{
-font-size:34px;
-cursor:pointer;
-}
-
-.search{
-font-size:34px;
-cursor:pointer;
-}
-
 .hero{
 padding:80px 20px;
 text-align:center;
@@ -132,17 +46,9 @@ font-weight:700;
 }
 
 .hero p{
-font-size:26px;
+font-size:24px;
 margin-top:15px;
-color:#d8e7ff;
-}
-
-.hero img{
-width:280px;
-margin-top:35px;
-border-radius:25px;
-border:5px solid white;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
+color:#d9d9d9;
 }
 
 .searchbox{
@@ -178,33 +84,27 @@ padding:60px 20px;
 }
 
 .title{
-font-size:50px;
+font-size:55px;
 margin-bottom:40px;
 text-align:center;
 }
 
 .card{
 background:#0c2f5d;
-padding:35px;
-border-radius:30px;
-margin-bottom:40px;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
-}
-
-.card h2{
-font-size:40px;
-margin-bottom:25px;
+padding:30px;
+border-radius:25px;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
 .card p{
 font-size:22px;
-line-height:2;
-color:#e6eefc;
+line-height:1.8;
+margin-top:15px;
 }
 
-.grid{
+.gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
 }
 
@@ -213,11 +113,6 @@ background:#0c2f5d;
 border-radius:25px;
 overflow:hidden;
 box-shadow:0 0 15px rgba(0,0,0,0.5);
-transition:0.3s;
-}
-
-.gallery-card:hover{
-transform:translateY(-10px);
 }
 
 .gallery-card img{
@@ -227,220 +122,129 @@ object-fit:cover;
 }
 
 .gallery-content{
-padding:25px;
+padding:20px;
 }
 
 .gallery-content h3{
 font-size:32px;
-margin-bottom:15px;
-}
-
-.gallery-content p{
-font-size:20px;
-line-height:1.8;
-color:#dce8ff;
-}
-
-.timeline{
-border-left:5px solid #1f7cff;
-padding-left:30px;
-}
-
-.timeline-item{
-margin-bottom:40px;
-}
-
-.timeline-item h3{
-font-size:34px;
-color:#5fa9ff;
 margin-bottom:10px;
 }
 
+.gallery-content p{
+font-size:19px;
+line-height:1.7;
+}
+
+.timeline{
+border-left:4px solid #0066ff;
+padding-left:25px;
+}
+
+.timeline-item{
+margin-bottom:35px;
+}
+
+.timeline-item h3{
+font-size:32px;
+color:#4ea3ff;
+}
+
 .timeline-item p{
-font-size:22px;
-line-height:1.9;
+font-size:21px;
+line-height:1.7;
+margin-top:10px;
 }
 
 .quote{
-background:#11407b;
-padding:30px;
+background:#0c2f5d;
+padding:25px;
 border-radius:20px;
 font-size:28px;
-font-style:italic;
 margin-bottom:25px;
+text-align:center;
 }
 
-.youtube{
+.youtube .card{
 text-align:center;
 }
 
 .youtube button{
-padding:18px 45px;
-font-size:24px;
+padding:18px 40px;
 border:none;
 background:red;
 color:white;
-border-radius:15px;
-cursor:pointer;
+font-size:22px;
+border-radius:50px;
 margin-top:25px;
+cursor:pointer;
 }
 
 footer{
-background:#010d1d;
-padding:40px;
+background:#021327;
+padding:30px;
 text-align:center;
-font-size:22px;
-margin-top:50px;
+font-size:20px;
+margin-top:60px;
 }
 
 @media(max-width:768px){
+
 .hero h1{
-font-size:45px;
+font-size:42px;
 }
 
 .title{
 font-size:38px;
 }
 
-.card h2{
-font-size:30px;
-}
-
 .card p,
-.gallery-content p,
-.timeline-item p{
+.timeline-item p,
+.gallery-content p{
 font-size:18px;
 }
+
 }
-</style></head><body><header>
-<div class="menu">☰</div>
-<div class="logo">Voice Of Ambedkar</div>
-<div class="search">🔍</div>
-</header><section class="hero">
-<h1>Voice Of Ambedkar</h1>
-<p>Voice of Equality • Voice of Justice</p><img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Dr._Bhimrao_Ambedkar.jpg"><div class="searchbox">
-<input type="text" placeholder="Search Babasaheb history, quotes, education...">
-<button>Search</button>
-</div>
-</section><section class="section">
-<h1 class="title">डॉ. भीमराव अम्बेडकर का जीवन परिचय</h1><div class="card">
-<h2>Babasaheb Biography</h2><p>
-डॉ. भीमराव रामजी अम्बेडकर का जन्म 14 अप्रैल 1891 को मध्य प्रदेश के महू में हुआ था।
-वे भारतीय संविधान के निर्माता, महान समाज सुधारक, अर्थशास्त्री, शिक्षाविद और दलितों के अधिकारों के सबसे बड़े नेता माने जाते हैं।
-बचपन में उन्हें भेदभाव और छुआछूत का सामना करना पड़ा लेकिन उन्होंने शिक्षा को अपना सबसे बड़ा हथियार बनाया।
-</p><p>
-उन्होंने Columbia University और London School of Economics जैसी विश्व प्रसिद्ध universities से शिक्षा प्राप्त की।
-भारत लौटने के बाद उन्होंने समाज में समानता और न्याय के लिए संघर्ष शुरू किया।
-उन्होंने लाखों गरीब और दलित लोगों को शिक्षा और अधिकारों के लिए प्रेरित किया।
-</p>
-</div>
-</section><section class="section">
-<h1 class="title">Babasaheb Historical Gallery</h1><div class="grid"><div class="gallery-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Ambedkar_at_Mahad_Satyagraha.jpg">
-<div class="gallery-content">
-<h3>महाड़ सत्याग्रह</h3>
-<p>
-1927 में डॉ. अम्बेडकर ने महाड़ सत्याग्रह का नेतृत्व किया। यह दलितों के पानी पीने के अधिकार की ऐतिहासिक लड़ाई थी।
-</p>
-</div>
-</div><div class="gallery-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Dr._Bhimrao_Ambedkar.jpg">
-<div class="gallery-content">
-<h3>भारतीय संविधान</h3>
-<p>
-डॉ. अम्बेडकर भारतीय संविधान निर्माण समिति के अध्यक्ष थे। उन्होंने भारत को समानता और न्याय आधारित संविधान दिया।
-</p>
-</div>
-</div><div class="gallery-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Ambedkar_with_followers.jpg">
-<div class="gallery-content">
-<h3>बौद्ध धर्म दीक्षा</h3>
-<p>
-1956 में डॉ. अम्बेडकर ने लाखों अनुयायियों के साथ बौद्ध धर्म स्वीकार किया।
-</p>
-</div>
-</div></div>
-</section><section class="section">
-<h1 class="title">Babasaheb Timeline</h1><div class="card timeline">
-<div class="timeline-item">
-<h3>1891</h3>
-<p>14 अप्रैल 1891 को डॉ. भीमराव अम्बेडकर का जन्म हुआ।</p>
-</div><div class="timeline-item">
-<h3>1913</h3>
-<p>उच्च शिक्षा के लिए अमेरिका गए और Columbia University में पढ़ाई की।</p>
-</div><div class="timeline-item">
-<h3>1927</h3>
-<p>महाड़ सत्याग्रह का नेतृत्व किया।</p>
-</div><div class="timeline-item">
-<h3>1947</h3>
-<p>भारतीय संविधान निर्माण समिति के अध्यक्ष बने।</p>
-</div><div class="timeline-item">
-<h3>1956</h3>
-<p>बौद्ध धर्म स्वीकार किया और 6 दिसंबर को महापरिनिर्वाण हुआ।</p>
-</div>
-</div>
-</section><section class="section">
-<h1 class="title">Babasaheb Thoughts</h1><div class="quote">
-“शिक्षित बनो, संगठित रहो, संघर्ष करो।”
-</div><div class="quote">
-“मनुष्य महान अपने कर्मों से बनता है।”
-</div><div class="quote">
-“ज्ञान ही जीवन का आधार है।”
-</div>
-</section><section class="section youtube">
-<h1 class="title">Voice Of Ambedkar YouTube Channel</h1><div class="card">
-<p>
-हमारे YouTube चैनल पर Babasaheb के विचार, historical stories, motivation और social awareness videos देखें।
-</p><a href="https://youtube.com" target="_blank">
-<button>Subscribe Channel</button>
-</a>
-</div>
-</section><section class="section">
 
-<h1 class="title">Featured Articles</h1>
+</style>
+</head>
 
-<div class="grid">
+<body>
 
-<div class="gallery-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Ambedkar_at_Mahad_Satyagraha.jpg">
+<header>
 
-<div class="gallery-content">
-<h3>
-<a href="mahad-satyagraha.html">
-महाड़ सत्याग्रह
-</a>
-</h3>
+<div class="menu" onclick="toggleMenu()" style="font-size:34px;cursor:pointer;color:white;">
+☰
+</div>
+
+<div style="font-size:28px;font-weight:700;color:white;">
+Voice Of Ambedkar
+</div>
+
+<div style="font-size:30px;color:white;">
+🔎
+</div>
+
+</header>
+
+<div id="menuBox" style="
+display:none;
+position:absolute;
+top:80px;
+left:20px;
+background:#0c2f5d;
+padding:20px;
+border-radius:20px;
+width:280px;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+z-index:999;
+">
+
+<h2>मुख्य विषय</h2>
+
+<br>
 
 <p>
-1927 में डॉ. अम्बेडकर ने पानी के अधिकार के लिए ऐतिहासिक आंदोलन चलाया।
-</p>
-</div>
-</div>
-
-<div class="gallery-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Dr._Bhimrao_Ambedkar.jpg">
-
-<div class="gallery-content">
-<h3>
-<a href="biography.html">
-डॉ. अम्बेडकर जीवन परिचय
-</a>
-</h3>
-
-<p>
-Babasaheb का पूरा जीवन, संघर्ष, शिक्षा और संविधान निर्माण।
-</p>
-</div>
-</div>
-
-</div><section class="section">
-
-<h1 class="title">Ambedkar Knowledge Links</h1>
-
-<div class="card">
-
-<p>
-<a href="biography.html">
+<a href="biography.html" style="color:white;text-decoration:none;font-size:20px;">
 🔵 डॉ. भीमराव अम्बेडकर का जीवन परिचय
 </a>
 </p>
@@ -448,7 +252,7 @@ Babasaheb का पूरा जीवन, संघर्ष, शिक्ष�
 <br>
 
 <p>
-<a href="mahad-satyagraha.html">
+<a href="mahad-satyagraha.html" style="color:white;text-decoration:none;font-size:20px;">
 🔵 महाड़ सत्याग्रह
 </a>
 </p>
@@ -456,45 +260,188 @@ Babasaheb का पूरा जीवन, संघर्ष, शिक्ष�
 <br>
 
 <p>
-<a href="#">
-🔵 भारतीय संविधान निर्माण
+<a href="constitution.html" style="color:white;text-decoration:none;font-size:20px;">
+🔵 भारतीय संविधान
 </a>
 </p>
 
-<br>
+</div>
+
+<section class="hero">
+
+<h1>Voice Of Ambedkar</h1>
 
 <p>
-<a href="#">
-🔵 बौद्ध धर्म दीक्षा
-</a>
+Voice of Equality • Voice of Justice
 </p>
 
-<br>
+<div class="searchbox">
+<input type="text" placeholder="Search Babasaheb history, quotes, education...">
+<button>Search</button>
+</div>
+
+</section>
+
+<section class="section">
+
+<h1 class="title">
+डॉ. भीमराव अम्बेडकर का जीवन परिचय
+</h1>
+
+<div class="card">
+
+<h2 style="font-size:45px;">
+Babasaheb Biography
+</h2>
 
 <p>
-<a href="#">
-🔵 Babasaheb Education
-</a>
+डॉ. भीमराव रामजी अम्बेडकर का जन्म 14 अप्रैल 1891 को मध्य प्रदेश के महू में हुआ था।
+वे भारतीय संविधान के निर्माता, महान समाज सुधारक, अर्थशास्त्री, शिक्षाविद और दलितों के अधिकारों के सबसे बड़े नेता माने जाते हैं।
 </p>
 
-<br>
+<p>
+उन्होंने Columbia University और London School of Economics जैसी विश्व प्रसिद्ध universities से शिक्षा प्राप्त की।
+</p>
 
 <p>
-<a href="#">
-🔵 सामाजिक आंदोलन
-</a>
+भारत लौटने के बाद उन्होंने समाज में समानता और न्याय के लिए संघर्ष किया।
+उन्होंने लाखों गरीब और दलित लोगों को शिक्षा और अधिकारों के लिए प्रेरित किया।
 </p>
 
 </div>
 
 </section>
 
+<section class="section">
+
+<h1 class="title">
+Babasaheb Historical Gallery
+</h1>
+
+<div class="gallery">
+
+<div class="gallery-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Ambedkar_with_followers.jpg">
+<div class="gallery-content">
+<h3>महाड़ सत्याग्रह</h3>
+<p>
+1927 में डॉ. अम्बेडकर ने महाड़ सत्याग्रह का नेतृत्व किया।
+यह दलितों के पानी पीने के अधिकार की ऐतिहासिक लड़ाई थी।
+</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Dr._Bhimrao_Ambedkar.jpg">
+<div class="gallery-content">
+<h3>भारतीय संविधान</h3>
+<p>
+डॉ. अम्बेडकर भारतीय संविधान निर्माण समिति के अध्यक्ष थे।
+उन्होंने भारत को समानता और न्याय आधारित संविधान दिया।
+</p>
+</div>
+</div>
+
+<div class="gallery-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Ambedkar_with_followers.jpg">
+<div class="gallery-content">
+<h3>बौद्ध धर्म दीक्षा</h3>
+<p>
+1956 में डॉ. अम्बेडकर ने लाखों अनुयायियों के साथ बौद्ध धर्म स्वीकार किया।
+</p>
+</div>
+</div>
+
+</div>
+
 </section>
+
+<section class="section">
+
+<h1 class="title">Babasaheb Timeline</h1>
+
+<div class="card timeline">
+
+<div class="timeline-item">
+<h3>1891</h3>
+<p>
+14 अप्रैल 1891 को डॉ. भीमराव अम्बेडकर का जन्म हुआ।
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>1927</h3>
+<p>
+महाड़ सत्याग्रह का नेतृत्व किया।
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>1947</h3>
+<p>
+भारतीय संविधान निर्माण समिति के अध्यक्ष बने।
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>1956</h3>
+<p>
+बौद्ध धर्म स्वीकार किया और 6 दिसंबर को महापरिनिर्वाण हुआ।
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h1 class="title">Babasaheb Thoughts</h1>
+
+<div class="quote">
+“शिक्षित बनो, संगठित रहो, संघर्ष करो”
+</div>
+
+<div class="quote">
+“मनुष्य महान अपने कर्मों से बनता है।”
+</div>
+
+<div class="quote">
+“ज्ञान ही जीवन का आधार है।”
+</div>
+
+</section>
+
+<section class="section youtube">
+
+<h1 class="title">
+Voice Of Ambedkar YouTube Channel
+</h1>
+
+<div class="card">
+
+<p>
+हमारे YouTube चैनल पर Babasaheb के विचार, historical stories, motivation और social awareness videos देखें।
+</p>
+
+<a href="https://youtube.com" target="_blank">
+<button>Subscribe Channel</button>
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Voice Of Ambedkar • Jai Bhim
+</footer>
+
 <script>
 
 function toggleMenu() {
 
-var menu = document.getElementById("menuBox");
+var menu =
+document.getElementById("menuBox");
 
 if(menu.style.display === "block") {
 menu.style.display = "none";
@@ -505,8 +452,6 @@ menu.style.display = "block";
 }
 
 </script>
-<footer>
-© 2026 Voice Of Ambedkar • Jai Bhim
-</footer>
+
 </body>
 </html>
