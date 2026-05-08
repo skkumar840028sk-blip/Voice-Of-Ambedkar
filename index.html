@@ -9,7 +9,56 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
-}
+}<header style="
+background:#021327;
+padding:18px 25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+">
+
+<div class="menu" onclick="toggleMenu()" style="font-size:34px;cursor:pointer;color:white;">
+☰
+</div>
+
+<div style="font-size:28px;font-weight:700;color:white;">
+Voice Of Ambedkar
+</div>
+
+<div style="font-size:30px;color:white;">
+🔍
+</div>
+
+</header>
+
+<div id="menuBox" style="
+display:none;
+position:absolute;
+top:80px;
+left:20px;
+background:#0c2f5d;
+padding:20px;
+border-radius:20px;
+width:280px;
+z-index:1000;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+">
+
+<p><a href="index.html" style="color:white;text-decoration:none;font-size:22px;">🏠 Home</a></p>
+
+<br>
+
+<p><a href="biography.html" style="color:white;text-decoration:none;font-size:22px;">📖 Biography</a></p>
+
+<br>
+
+<p><a href="mahad-satyagraha.html" style="color:white;text-decoration:none;font-size:22px;">✊ महाड़ सत्याग्रह</a></p>
+
+</div>
 <div class="card">
 <h2>मुख्य विषय</h2>
 
@@ -440,7 +489,21 @@ Babasaheb का पूरा जीवन, संघर्ष, शिक्ष�
 
 </section>
 
-</section><footer>
+</section><script>
+
+function toggleMenu() {
+
+var menu = document.getElementById("menuBox");
+
+if(menu.style.display === "block") {
+menu.style.display = "none";
+} else {
+menu.style.display = "block";
+}
+
+}
+
+</script><footer>
 © 2026 Voice Of Ambedkar • Jai Bhim
 </footer></body>
 </html>
