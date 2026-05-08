@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="hi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Voice Of Ambedkar</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Voice Of Ambedkar
+</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+rel="stylesheet">
 
 <style>
 
@@ -18,435 +28,537 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#071b34;
-color:white;
+background:#f2f2f2;
 }
 
+/* TOP BLACK BAR */
+
+.top-black{
+background:black;
+color:white;
+padding:10px;
+text-align:center;
+font-size:14px;
+font-weight:600;
+}
+
+/* HEADER */
+
 header{
-background:#021327;
-padding:18px 25px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+background:white;
+padding:15px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 0 10px rgba(0,0,0,0.5);
 }
 
-.hero{
-padding:80px 20px;
-text-align:center;
-background:linear-gradient(to bottom,#0a3b8c,#071b34);
+.header-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.hero h1{
-font-size:65px;
+.logo{
+font-size:38px;
 font-weight:700;
+color:#d60000;
 }
 
-.hero p{
-font-size:24px;
-margin-top:15px;
-color:#d9d9d9;
+.menu{
+font-size:38px;
+cursor:pointer;
 }
+
+.search{
+font-size:30px;
+}
+
+/* MENU BOX */
+
+#menuBox{
+display:none;
+position:fixed;
+top:90px;
+right:20px;
+background:white;
+width:320px;
+padding:20px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,0.2);
+z-index:9999;
+}
+
+#menuBox a{
+display:block;
+padding:15px 0;
+text-decoration:none;
+font-size:20px;
+color:black;
+border-bottom:1px solid #ddd;
+font-weight:600;
+}
+
+/* CATEGORY */
+
+.category{
+display:flex;
+overflow:auto;
+gap:20px;
+padding:18px;
+background:white;
+margin-top:5px;
+}
+
+.category a{
+text-decoration:none;
+color:black;
+font-size:20px;
+font-weight:600;
+white-space:nowrap;
+}
+
+/* TAGS */
+
+.tags{
+display:flex;
+gap:15px;
+padding:20px;
+overflow:auto;
+}
+
+.tag{
+background:white;
+padding:12px 25px;
+border-radius:50px;
+font-weight:600;
+white-space:nowrap;
+}
+
+/* HEADLINE */
+
+.headline{
+background:white;
+padding:25px;
+}
+
+.headline h1{
+font-size:50px;
+line-height:1.4;
+}
+
+.headline p{
+font-size:22px;
+margin-top:20px;
+line-height:1.8;
+color:#444;
+}
+
+/* IMAGE */
+
+.main-image{
+padding:20px;
+background:white;
+}
+
+.main-image img{
+width:100%;
+border-radius:20px;
+}
+
+/* SEARCH BAR */
 
 .searchbox{
-max-width:700px;
-margin:40px auto 0;
+margin:20px;
 display:flex;
 background:white;
 border-radius:50px;
 overflow:hidden;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
 .searchbox input{
 flex:1;
 padding:18px;
-font-size:20px;
 border:none;
 outline:none;
+font-size:20px;
 }
 
 .searchbox button{
 padding:18px 35px;
 border:none;
-background:#0066ff;
+background:#d60000;
 color:white;
 font-size:20px;
-cursor:pointer;
 }
+
+/* SECTION */
 
 .section{
-max-width:1300px;
-margin:auto;
-padding:60px 20px;
-}
-
-.title{
-font-size:55px;
-margin-bottom:40px;
-text-align:center;
-}
-
-.card{
-background:#0c2f5d;
-padding:30px;
-border-radius:25px;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
-}
-
-.card p{
-font-size:22px;
-line-height:1.8;
-margin-top:15px;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-}
-
-.gallery-card{
-background:#0c2f5d;
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 0 15px rgba(0,0,0,0.5);
-}
-
-.gallery-card img{
-width:100%;
-height:260px;
-object-fit:cover;
-}
-
-.gallery-content{
 padding:20px;
 }
 
-.gallery-content h3{
-font-size:32px;
-margin-bottom:10px;
+.section-title{
+font-size:42px;
+margin-bottom:25px;
+font-weight:700;
 }
 
-.gallery-content p{
+/* NEWS GRID */
+
+.news-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card-content h3{
+font-size:30px;
+margin-bottom:15px;
+}
+
+.card-content p{
 font-size:19px;
 line-height:1.7;
+color:#555;
 }
 
-.timeline{
-border-left:4px solid #0066ff;
-padding-left:25px;
-}
-
-.timeline-item{
-margin-bottom:35px;
-}
-
-.timeline-item h3{
-font-size:32px;
-color:#4ea3ff;
-}
-
-.timeline-item p{
-font-size:21px;
-line-height:1.7;
-margin-top:10px;
-}
-
-.quote{
-background:#0c2f5d;
-padding:25px;
-border-radius:20px;
-font-size:28px;
-margin-bottom:25px;
-text-align:center;
-}
-
-.youtube .card{
-text-align:center;
-}
-
-.youtube button{
-padding:18px 40px;
-border:none;
-background:red;
+.card-content a{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#d60000;
 color:white;
-font-size:22px;
+text-decoration:none;
 border-radius:50px;
-margin-top:25px;
-cursor:pointer;
 }
+
+/* FOOTER */
 
 footer{
-background:#021327;
-padding:30px;
+background:black;
+color:white;
+padding:40px;
 text-align:center;
-font-size:20px;
-margin-top:60px;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:42px;
-}
-
-.title{
-font-size:38px;
-}
-
-.card p,
-.timeline-item p,
-.gallery-content p{
+margin-top:40px;
 font-size:18px;
 }
 
-}
-
 </style>
+
 </head>
 
 <body>
 
+<div class="top-black">
+
+FRI, MAY 08, 2026 | Voice Of Ambedkar News Portal
+
+</div>
+
 <header>
 
-<div class="menu" onclick="toggleMenu()" style="font-size:34px;cursor:pointer;color:white;">
+<div class="header-top">
+
+<div class="logo">
+जय भीम
+</div>
+
+<div style="display:flex;gap:20px;align-items:center;">
+
+<div class="search">
+🔎
+</div>
+
+<div class="menu"
+onclick="toggleMenu()">
 ☰
 </div>
 
-<div style="font-size:28px;font-weight:700;color:white;">
-Voice Of Ambedkar
 </div>
 
-<div style="font-size:30px;color:white;">
-🔎
 </div>
 
 </header>
 
-<div id="menuBox" style="
-display:none;
-position:absolute;
-top:80px;
-left:20px;
-background:#0c2f5d;
-padding:20px;
-border-radius:20px;
-width:280px;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
-z-index:999;
-">
+<!-- MENU -->
 
-<h2>मुख्य विषय</h2>
+<div id="menuBox">
 
-<br>
-
-<p>
-<a href="biography.html" style="color:white;text-decoration:none;font-size:20px;">
-🔵 डॉ. भीमराव अम्बेडकर का जीवन परिचय
+<a href="biography.html">
+डॉ. अम्बेडकर का जीवन
 </a>
-</p>
 
-<br>
-
-<p>
-<a href="mahad-satyagraha.html" style="color:white;text-decoration:none;font-size:20px;">
-🔵 महाड़ सत्याग्रह
+<a href="#">
+महिलाओं के अधिकार
 </a>
-</p>
 
-<br>
-
-<p>
-<a href="constitution.html" style="color:white;text-decoration:none;font-size:20px;">
-🔵 भारतीय संविधान
+<a href="#">
+शिक्षा के लिए योगदान
 </a>
-</p>
+
+<a href="#">
+भारतीय संविधान
+</a>
+
+<a href="#">
+महाड़ सत्याग्रह
+</a>
+
+<a href="#">
+बौद्ध धर्म दीक्षा
+</a>
+
+<a href="#">
+दलित आंदोलन
+</a>
+
+<a href="#">
+Quotes
+</a>
+
+<a href="#">
+Gallery
+</a>
+
+<a href="#">
+Timeline
+</a>
 
 </div>
 
-<section class="hero">
+<!-- CATEGORY -->
 
-<h1>Voice Of Ambedkar</h1>
+<div class="category">
+
+<a href="#">
+होम
+</a>
+
+<a href="#">
+ताजा
+</a>
+
+<a href="#">
+ब्रेकिंग
+</a>
+
+<a href="#">
+संविधान
+</a>
+
+<a href="#">
+महिलाएं
+</a>
+
+<a href="#">
+शिक्षा
+</a>
+
+<a href="#">
+आंदोलन
+</a>
+
+<a href="#">
+इतिहास
+</a>
+
+</div>
+
+<!-- TAGS -->
+
+<div class="tags">
+
+<div class="tag">
+संविधान
+</div>
+
+<div class="tag">
+महिलाओं के अधिकार
+</div>
+
+<div class="tag">
+महाड़ सत्याग्रह
+</div>
+
+<div class="tag">
+शिक्षा
+</div>
+
+</div>
+
+<!-- HEADLINE -->
+
+<section class="headline">
+
+<h1>
+
+डॉ. भीमराव अम्बेडकर ने भारत को समानता और न्याय का संविधान दिया
+
+</h1>
 
 <p>
-Voice of Equality • Voice of Justice
+
+डॉ. बाबासाहेब अम्बेडकर भारतीय संविधान के निर्माता, महान समाज सुधारक और करोड़ों लोगों के प्रेरणास्रोत हैं।
+
 </p>
+
+</section>
+
+<!-- IMAGE -->
+
+<div class="main-image">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Dr._Bhimrao_Ambedkar.jpg">
+
+</div>
+
+<!-- SEARCH -->
 
 <div class="searchbox">
-<input type="text" placeholder="Search Babasaheb history, quotes, education...">
-<button>Search</button>
+
+<input type="text"
+placeholder="Search Babasaheb history, constitution, quotes...">
+
+<button>
+Search
+</button>
+
 </div>
 
-</section>
+<!-- ARTICLES -->
 
 <section class="section">
 
-<h1 class="title">
-डॉ. भीमराव अम्बेडकर का जीवन परिचय
-</h1>
+<h2 class="section-title">
 
-<div class="card">
+Featured Articles
 
-<h2 style="font-size:45px;">
-Babasaheb Biography
 </h2>
 
-<p>
-डॉ. भीमराव रामजी अम्बेडकर का जन्म 14 अप्रैल 1891 को मध्य प्रदेश के महू में हुआ था।
-वे भारतीय संविधान के निर्माता, महान समाज सुधारक, अर्थशास्त्री, शिक्षाविद और दलितों के अधिकारों के सबसे बड़े नेता माने जाते हैं।
-</p>
-
-<p>
-उन्होंने Columbia University और London School of Economics जैसी विश्व प्रसिद्ध universities से शिक्षा प्राप्त की।
-</p>
-
-<p>
-भारत लौटने के बाद उन्होंने समाज में समानता और न्याय के लिए संघर्ष किया।
-उन्होंने लाखों गरीब और दलित लोगों को शिक्षा और अधिकारों के लिए प्रेरित किया।
-</p>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h1 class="title">
-Babasaheb Historical Gallery
-</h1>
-
-<div class="gallery">
-
-<div class="gallery-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Ambedkar_with_followers.jpg">
-<div class="gallery-content">
-<h3>महाड़ सत्याग्रह</h3>
-<p>
-1927 में डॉ. अम्बेडकर ने महाड़ सत्याग्रह का नेतृत्व किया।
-यह दलितों के पानी पीने के अधिकार की ऐतिहासिक लड़ाई थी।
-</p>
-</div>
-</div>
-
-<div class="gallery-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Dr._Bhimrao_Ambedkar.jpg">
-<div class="gallery-content">
-<h3>भारतीय संविधान</h3>
-<p>
-डॉ. अम्बेडकर भारतीय संविधान निर्माण समिति के अध्यक्ष थे।
-उन्होंने भारत को समानता और न्याय आधारित संविधान दिया।
-</p>
-</div>
-</div>
-
-<div class="gallery-card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Ambedkar_with_followers.jpg">
-<div class="gallery-content">
-<h3>बौद्ध धर्म दीक्षा</h3>
-<p>
-1956 में डॉ. अम्बेडकर ने लाखों अनुयायियों के साथ बौद्ध धर्म स्वीकार किया।
-</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h1 class="title">Babasaheb Timeline</h1>
-
-<div class="card timeline">
-
-<div class="timeline-item">
-<h3>1891</h3>
-<p>
-14 अप्रैल 1891 को डॉ. भीमराव अम्बेडकर का जन्म हुआ।
-</p>
-</div>
-
-<div class="timeline-item">
-<h3>1927</h3>
-<p>
-महाड़ सत्याग्रह का नेतृत्व किया।
-</p>
-</div>
-
-<div class="timeline-item">
-<h3>1947</h3>
-<p>
-भारतीय संविधान निर्माण समिति के अध्यक्ष बने।
-</p>
-</div>
-
-<div class="timeline-item">
-<h3>1956</h3>
-<p>
-बौद्ध धर्म स्वीकार किया और 6 दिसंबर को महापरिनिर्वाण हुआ।
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h1 class="title">Babasaheb Thoughts</h1>
-
-<div class="quote">
-“शिक्षित बनो, संगठित रहो, संघर्ष करो”
-</div>
-
-<div class="quote">
-“मनुष्य महान अपने कर्मों से बनता है।”
-</div>
-
-<div class="quote">
-“ज्ञान ही जीवन का आधार है।”
-</div>
-
-</section>
-
-<section class="section youtube">
-
-<h1 class="title">
-Voice Of Ambedkar YouTube Channel
-</h1>
+<div class="news-grid">
 
 <div class="card">
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Dr._Bhimrao_Ambedkar.jpg">
+
+<div class="card-content">
+
+<h3>
+डॉ. अम्बेडकर का जीवन
+</h3>
+
 <p>
-हमारे YouTube चैनल पर Babasaheb के विचार, historical stories, motivation और social awareness videos देखें।
+
+Babasaheb के बचपन, शिक्षा, संघर्ष और संविधान निर्माण की पूरी कहानी पढ़ें।
+
 </p>
 
-<a href="https://youtube.com" target="_blank">
-<button>Subscribe Channel</button>
+<a href="biography.html">
+
+पूरा पढ़ें
+
 </a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Ambedkar_with_followers.jpg">
+
+<div class="card-content">
+
+<h3>
+महाड़ सत्याग्रह
+</h3>
+
+<p>
+
+1927 का ऐतिहासिक आंदोलन जिसने सामाजिक न्याय की नई दिशा दी।
+
+</p>
+
+<a href="#">
+
+पूरा पढ़ें
+
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Dr._Bhimrao_Ambedkar.jpg">
+
+<div class="card-content">
+
+<h3>
+महिलाओं के अधिकार
+</h3>
+
+<p>
+
+डॉ. अम्बेडकर ने महिलाओं को समान अधिकार दिलाने के लिए ऐतिहासिक कार्य किए।
+
+</p>
+
+<a href="#">
+
+पूरा पढ़ें
+
+</a>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
 <footer>
+
 © 2026 Voice Of Ambedkar • Jai Bhim
+
 </footer>
 
 <script>
 
-function toggleMenu() {
+function toggleMenu(){
 
 var menu =
 document.getElementById("menuBox");
 
-if(menu.style.display === "block") {
+if(menu.style.display === "block"){
+
 menu.style.display = "none";
-} else {
+
+}else{
+
 menu.style.display = "block";
+
 }
 
 }
